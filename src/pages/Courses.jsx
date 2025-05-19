@@ -1,11 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ChevronUpIcon } from '@heroicons/react/24/outline';
+
 
 const courses = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show button when scrolled down
   useEffect(() => {
     AOS.init({ duration: 1000 });
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 200);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <div className="bg-white py-16 px-6 relative overflow-hidden">
@@ -35,7 +50,7 @@ const courses = () => {
               <p className="text-s leading-relaxed text-black mb-2 z-10 ">
                 Opportunities 
               </p>
-              <ul className="list-disc list-inside text-s leading-relaxed text-black mb-2 z-10">
+              <ul className="list-disc list-inside text-s leading-relaxed text-black mb-2 ">
                 <li>Daily Processing</li>
                 <li>Coco Hub Tuburan</li>
                 <li>Demo Farm</li>
@@ -54,7 +69,7 @@ const courses = () => {
           {/* Section 2 */}
 
           <section className="mb-16 grid md:grid-cols-2 gap-10 items-start">
-            <div className="flex items-start h-full z-10" data-aos="fade-right ">
+            <div className="flex items-start h-full z-10" data-aos="fade-right">
               <img
                 src="man.png"
                 alt="Mission Image"
@@ -172,9 +187,20 @@ const courses = () => {
         </div>  
         </div>
       </div>
+      {/* Scroll-to-Top Button */}
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          className="z-10 fixed bottom-8 right-0 p-1.5  rounded-full bg-green-600 text-white hover:bg-green-900 shadow-md transition"
+          aria-label="Scroll to top"
+        >
+          <ChevronUpIcon className="h-6 w-6" />
+        </button>
+      )}
     </div>
     
   );
 };
 
 export default courses;
+

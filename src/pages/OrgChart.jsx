@@ -14,7 +14,7 @@ const Line = ({ height = "h-10", width = "w-1", className = "" }) => (
 
 const OrgChart = () => {
   return (
-    <div className="flex flex-col items-center py-10 relative">
+    <div className="flex flex-col items-center py-10 relative text-black font-bold ">FARM SCHOOL ORGANIZATIONAL CHART
       {/* General Manager */}
       <Box
         name="Place Maria Elena C. Limocon"
@@ -77,6 +77,7 @@ const OrgChart = () => {
         
       </div>
          <Line className="absolute bottom-[272px] left-[458px] h-[80px]"/>
+
     </div>
 
     

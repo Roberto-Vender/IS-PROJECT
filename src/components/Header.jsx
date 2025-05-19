@@ -83,6 +83,10 @@ function AdminHeader() {
                   <img src="location.png" alt="About Us" className="w-5 h-5 mr-3" />
                   About Us
                 </Link>
+                <Link to="/OrgChart" className="text-gray-700 px-4 py-2 text-sm flex items-center hover:bg-gray-400" onClick={closeDropdown}>
+                  <img src="process.png" alt="Organizational Chart" className="w-5 h-5 mr-3" />
+                  Organizational Chart
+                </Link>
                 <Link to="/courses" className="text-gray-700  px-4 py-2 text-sm flex items-center hover:bg-gray-400" onClick={closeDropdown}>
                   <img src="learning.png" alt="Courses" className="w-5 h-5 mr-3" />
                   Courses
@@ -91,14 +95,15 @@ function AdminHeader() {
                   <img src="phone.png" alt="Contact" className="w-5 h-5 mr-3" />
                   Contact
                 </Link>
-                <Link to="/flowchart" className="text-gray-700 px-4 py-2 text-sm flex items-center hover:bg-gray-400" onClick={closeDropdown}>
+                <Link to="/ProcessFlow" className="text-gray-700 px-4 py-2 text-sm flex items-center hover:bg-gray-400" onClick={closeDropdown}>
                   <img src="flow-chart.png" alt="Process Flowchart" className="w-5 h-5 mr-3" />
                   Process Flowchart
                 </Link>
-                <Link to="/OrgChart" className="text-gray-700 px-4 py-2 text-sm flex items-center hover:bg-gray-400" onClick={closeDropdown}>
-                  <img src="process.png" alt="Organizational Chart" className="w-5 h-5 mr-3" />
-                  Organizational Chart
+                <Link to="/Requirements" className="text-gray-700 px-4 py-2 text-sm flex items-center hover:bg-gray-400" onClick={closeDropdown}>
+                  <img src="requirements.png" alt="Process Flowchart" className="w-5 h-5 mr-3" />
+                  Requirements
                 </Link>
+                
                 
               </div>
             </div>

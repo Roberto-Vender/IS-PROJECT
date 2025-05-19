@@ -16,6 +16,8 @@ import Contact from "../pages/contact";
 import Enrollment from "../pages/Enrollment";
 import Courses from "../pages/courses";
 import OrgChart from "../pages/OrgChart";
+import ProcessFlow from "../pages/ProcessFlow";
+import Requirements from "../pages/Requirements";
 
 
 
@@ -31,6 +33,8 @@ const AppRoutes = () => {
     <Route path="/Enrollment" element={<Enrollment />} />
     <Route path="/Courses" element={<Courses />} />
     <Route path="/OrgChart" element={<OrgChart />} />
+    <Route path="/ProcessFlow" element={<ProcessFlow />} />
+    <Route path="/Requirements" element={<Requirements />} />
     </Route>
 
 
