@@ -14,6 +14,8 @@ import Team from "../pages/Team";
 import AboutUs from "../pages/AboutUs";
 import Contact from "../pages/contact";
 import Enrollment from "../pages/Enrollment";
+import Courses from "../pages/courses";
+import OrgChart from "../pages/OrgChart";
 
 
 
@@ -27,6 +29,8 @@ const AppRoutes = () => {
     <Route path="/AboutUs" element={<AboutUs />} />
     <Route path="/Contact" element={<Contact />} />
     <Route path="/Enrollment" element={<Enrollment />} />
+    <Route path="/Courses" element={<Courses />} />
+    <Route path="/OrgChart" element={<OrgChart />} />
     </Route>
 
 

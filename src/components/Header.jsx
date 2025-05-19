@@ -32,7 +32,7 @@ function AdminHeader() {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative z-20">
       <div
   className="p-3.5 z-10 bg-cover"
   style={{ backgroundImage: 'url(footerbg.jpg)', backgroundPosition: '67% 67%' }}
@@ -95,7 +95,7 @@ function AdminHeader() {
                   <img src="flow-chart.png" alt="Process Flowchart" className="w-5 h-5 mr-3" />
                   Process Flowchart
                 </Link>
-                <Link to="/Organizational" className="text-gray-700 px-4 py-2 text-sm flex items-center hover:bg-gray-400" onClick={closeDropdown}>
+                <Link to="/OrgChart" className="text-gray-700 px-4 py-2 text-sm flex items-center hover:bg-gray-400" onClick={closeDropdown}>
                   <img src="process.png" alt="Organizational Chart" className="w-5 h-5 mr-3" />
                   Organizational Chart
                 </Link>
